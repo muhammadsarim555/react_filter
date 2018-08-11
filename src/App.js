@@ -80,11 +80,11 @@ console.log(obj);
 export default App;
 
 
-class name_with{
-  constructor (){
-  this.name = "sarim",
-  this.age = 17
-  }
-  }
+// class name_with{
+//   constructor (){
+//   this.name = "sarim",
+//   this.age = 17
+//   }
+//   }
   
-  new name_with()
+//   new name_with()
