@@ -33,12 +33,11 @@ console.log(obj);
         <p className="App-intro">
           Welcome To {firstName} {name}.
         </p>
+          {console.log(obj  , "arrayofobject")}
         <ul>
           {
-
-            // return  
             obj.map((v,i) =>{
-            return <li> {v.name} {v.age}  </li>
+              return <li> {v.name} {v.age}  </li>
             
               })
         }
