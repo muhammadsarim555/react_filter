@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
-          <a href="https://www.google.com" target="_blank"  >Click for Google  </a>
+          <a href="https://www.google.com" target="_blank" title="Google" >Click for Google  </a>
         </header>
         <p className="App-intro">
           To get started .
