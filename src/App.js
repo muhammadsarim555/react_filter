@@ -56,11 +56,14 @@ console.log(obj);
         <p className="App-intro">
           Welcome To {firstName} {name}.
         </p>
-          {console.log(obj  , "arrayofobject")}
+          {/* {console.log(obj  , "arrayofobject")} */}
         <ul>
           {
             obj.map((v,i) =>{
-              return <li> {v.name} {v.age}  </li>
+              // console.log(v)
+              return v.map((value , idex)=>{
+                console.log(value);
+              })
             
               })
         }
