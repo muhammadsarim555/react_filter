@@ -9,19 +9,42 @@ class App extends Component {
     const name = "sarim";
     const number = 6;
 
-    const obj = [ 
-      {
-        name : "sarim",
-        age : 17,
-
-      },
-      {
-        name  :"khan",
-        age : 70,
-      },
-    
-    
-  ]
+    const obj = [
+      [
+        {
+          name: 'Afzal',
+          age: 21,
+          list: [1, 2, 3]
+        },
+        {
+          name: 'Manal',
+          age: 14,
+          list: [4, 5, 6]
+        },
+        {
+          name: 'Sarim',
+          age: 16,
+          list: [7, 8, 9]
+        }
+      ],
+      [
+        {
+          name: 'masood',
+          age: 43,
+          list: [11, 22, 33]
+        },
+        {
+          name: 'usama',
+          age: 63,
+          list: [44, 55, 66]
+        },
+        {
+          name: 'faraz',
+          age: 99,
+          list: [77, 88, 99]          
+        }
+      ]
+    ];
 console.log(obj);
     return (
       <div className="App">
