@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  
   render() {
+    const name = "sarim"
     return (
       <div className="App">
         <header className="App-header">
@@ -12,7 +14,7 @@ class App extends Component {
           <a href="https://www.google.com" target="_blank" title="Google" >Click for Google  </a>
         </header>
         <p className="App-intro">
-          To get started .
+          Welcome To {name}.
         </p>
       </div>
     );
