@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   abc(name){
-    return name
+    return "Sarim"
   }
   render() {
     const firstName = "Muhammad"
@@ -53,7 +53,7 @@ console.log(obj);
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">{this.abc("Sarim")}</h1>
+          <h1 className="App-title">{this.abc()}</h1>
           <a href="https://www.google.com" target="_blank" title="Google" >Click for Google  </a>
         </header>
         <p className="App-intro">
