@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  
+  abc(name){
+    return name
+  }
   render() {
     const firstName = "Muhammad"
     const name = "sarim";
@@ -45,16 +47,16 @@ class App extends Component {
         }
       ]
     ];
+    
 console.log(obj);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">{this.abc("Sarim")}</h1>
           <a href="https://www.google.com" target="_blank" title="Google" >Click for Google  </a>
         </header>
         <p className="App-intro">
-          Welcome To {firstName} {name}.
         </p>
           {/* {console.log(obj  , "arrayofobject")} */}
         <ul>
