@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   abc(name){
-    return "Sarim"
+    alert("Pakistan Zindabad!")
   }
   render() {
     const firstName = "Muhammad"
@@ -53,8 +53,11 @@ console.log(obj);
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">{this.abc()}</h1>
-          <a href="https://www.google.com" target="_blank" title="Google" >Click for Google  </a>
+          <h1 className="App-title">Love Pakistan</h1>
+          <button  onClick={(e) => { if (window.alert('Pakistan Zindabad!')) this.deleteItem(e) } }>
+              Delete
+</button>
+          {/* <button type="button" onclick="this.abc()" >Click for Google  </button> */}
         </header>
         <p className="App-intro">
         </p>
