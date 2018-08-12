@@ -54,7 +54,7 @@ console.log(obj);
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Love Pakistan</h1>
-          <button  onClick={(e) => { if (window.alert('Pakistan Zindabad!')) this.deleteItem(e) } }>
+          <button  onClick={function e()  {  window.alert('Pakistan Zindabad!')  } }>
               Delete
 </button>
           {/* <button type="button" onclick="this.abc()" >Click for Google  </button> */}
