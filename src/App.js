@@ -3,6 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      name : "sarim",
+    }
+  }
+
+  update(){
+    this.setState({
+      name : "Hello Sarim",
+    })
+  }
+
   abc(name){
     alert("Pakistan Zindabad!")
   }
@@ -53,9 +66,9 @@ console.log(obj);
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Love Pakistan</h1>
+          <h1 onClick={() => this.update()}  className="App-title">{this.state.name}</h1>
           <button  onClick={function e()  {  window.alert('Pakistan Zindabad!')  } }>
-              Delete
+              Click For Message!
 </button>
           {/* <button type="button" onclick="this.abc()" >Click for Google  </button> */}
         </header>
