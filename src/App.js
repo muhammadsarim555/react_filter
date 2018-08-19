@@ -11,11 +11,23 @@ class App extends Component {
     }
   }
 
-  changeSomething(){
-    this.setState({
-    text : this.state.condition ? "Success First" : "Second",
-    condition: !this.state.condition,
+  changeSomething(y){
+    console.log("***"  ,y)
+   this.setState({
+      
+      text : this.state.condition ? "Success First" : "Second",
+      condition: !this.state.condition,
   })
+  }
+
+
+  workHeader(){
+   
+ return (
+      <header className="App">
+          <h1 style={{color: 'yellow'}} >Working With Header  </h1>
+      </header>
+    )
   }
 
   // update(){
@@ -74,11 +86,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 onClick={() => this.changeSomething()}  className="App-title">{this.state.text}</h1>
+          <h1 onClick={() => this.changeSomething("sarim")}  className="App-title">{this.state.text}</h1>
 
-          <button  onClick={() => this.changeSomething()}> Click  Me </button>
+          <button  onClick={() => this.changeSomething("sarim")}> Click  Me </button>
 
 
+          {this.workHeader()}
 
 
 
