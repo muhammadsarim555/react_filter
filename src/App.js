@@ -6,76 +6,93 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      name : "sarim",
+      text : "By Default",
+      condition : true,
     }
   }
 
-  update(){
+  changeSomething(){
     this.setState({
-      name : "Hello Sarim",
-    })
+    text : this.state.condition ? "Success First" : "Second",
+    condition: !this.state.condition,
+  })
   }
 
-  abc(name){
-    alert("Pakistan Zindabad!")
-  }
+  // update(){
+  //   this.setState({
+      
+  //   })
+  // }
+
+  // abc(name){
+  //   alert("Pakistan Zindabad!")
+  // }
   render() {
-    const firstName = "Muhammad"
-    const name = "sarim";
-    const number = 6;
+//     const firstName = "Muhammad"
+//     const name = "sarim";
+//     const number = 6;
 
-    const obj = [
-      [
-        {
-          name: 'Afzal',
-          age: 21,
-          list: [1, 2, 3]
-        },
-        {
-          name: 'Manal',
-          age: 14,
-          list: [4, 5, 6]
-        },
-        {
-          name: 'Sarim',
-          age: 16,
-          list: [7, 8, 9]
-        }
-      ],
-      [
-        {
-          name: 'masood',
-          age: 43,
-          list: [11, 22, 33]
-        },
-        {
-          name: 'usama',
-          age: 63,
-          list: [44, 55, 66]
-        },
-        {
-          name: 'faraz',
-          age: 99,
-          list: [77, 88, 99]          
-        }
-      ]
-    ];
+//     const obj = [
+//       [
+//         {
+//           name: 'Afzal',
+//           age: 21,
+//           list: [1, 2, 3]
+//         },
+//         {
+//           name: 'Manal',
+//           age: 14,
+//           list: [4, 5, 6]
+//         },
+//         {
+//           name: 'Sarim',
+//           age: 16,
+//           list: [7, 8, 9]
+//         }
+//       ],
+//       [
+//         {
+//           name: 'masood',
+//           age: 43,
+//           list: [11, 22, 33]
+//         },
+//         {
+//           name: 'usama',
+//           age: 63,
+//           list: [44, 55, 66]
+//         },
+//         {
+//           name: 'faraz',
+//           age: 99,
+//           list: [77, 88, 99]          
+//         }
+//       ]
+//     ];
     
-console.log(obj);
+// console.log(obj);
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 onClick={() => this.update()}  className="App-title">{this.state.name}</h1>
-          <button  onClick={function e()  {  window.alert('Pakistan Zindabad!')  } }>
-              Click For Message!
-</button>
+          <h1 onClick={() => this.changeSomething()}  className="App-title">{this.state.text}</h1>
+
+          <button  onClick={() => this.changeSomething()}> Click  Me </button>
+
+
+
+
+
+
+
+          {/* <button  onClick={function e()  {  window.alert('Pakistan Zindabad!')  } }> */}
+              {/* Click For Message! */}
+{/* </button> */}
           {/* <button type="button" onclick="this.abc()" >Click for Google  </button> */}
         </header>
-        <p className="App-intro">
-        </p>
+        {/* <p className="App-intro"> */}
+        {/* </p> */}
           {/* {console.log(obj  , "arrayofobject")} */}
-        <ul>
+        {/* <ul>
           {
             obj.map((v,i) =>{
               // console.log(v)
@@ -85,11 +102,11 @@ console.log(obj);
             
               })
         }
-        </ul>
+        </ul> */}
 
-        {(number ===4 ) ? console.log( "this is right") : console.log( "not right")
+        {/* {(number ===4 ) ? console.log( "this is right") : console.log( "not right") */}
         
-}
+{/* } */}
       </div>
     );
   }
