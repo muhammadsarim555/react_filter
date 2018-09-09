@@ -14,6 +14,8 @@ class Container extends Component {
 
     return (
       <div className="App" >
+      <h1>I am app </h1>
+      {this.props.children}
       </div>
     );
   }

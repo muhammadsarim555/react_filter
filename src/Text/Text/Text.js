@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Container from '../../App/App/Container';
 class Text extends Component {
 
   constructor() {
@@ -12,7 +13,10 @@ class Text extends Component {
 
     return (
       <div className="App">
+      {/* <Container >  */}
+
       <h1> Hello , i am composable Component.</h1>
+      {/* </Container> */}
       </div>
     );
   }
