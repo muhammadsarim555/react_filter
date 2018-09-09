@@ -1,125 +1,60 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import Search from './component1/search/search'
 
 class App extends Component {
-  constructor(){
-    super()
+
+  constructor() {
+    super();
     this.state = {
-      text : "By Default",
-      condition : true,
+      list: ["Behari Boti", "Malai Boti", "Nahari", "Chicken Karahi", "Kaleji", "Sajji", "B R B Q", "Kabab"],
+      result: [],
     }
   }
 
-  changeSomething(y){
-    console.log("***"  ,y)
-   this.setState({
-      
-      text : this.state.condition ? "Success First" : "Second",
-      condition: !this.state.condition,
-  })
+  search(e) {
+    const { list } = this.state;
+    const text = e;
+
+    const result = list.filter((item) => {
+      const itemToLower = item.toLowerCase();
+      const lowerItem = item.toLowerCase();
+      const lowerText = text.toLowerCase();
+      return lowerItem.substring(0, lowerText.length).includes(lowerText)
+    })
+    this.setState({
+      result, text
+    })
+    // console.log(this.state.result);
+
   }
 
-
-  workHeader(){
-   
- return (
-      <header className="App">
-          <h1 style={{color: 'yellow'}} >Working With Header  </h1>
-      </header>
-    )
-  }
-
-  // update(){
-  //   this.setState({
-      
-  //   })
-  // }
-
-  // abc(name){
-  //   alert("Pakistan Zindabad!")
-  // }
-  render() {
-//     const firstName = "Muhammad"
-//     const name = "sarim";
-//     const number = 6;
-
-//     const obj = [
-//       [
-//         {
-//           name: 'Afzal',
-//           age: 21,
-//           list: [1, 2, 3]
-//         },
-//         {
-//           name: 'Manal',
-//           age: 14,
-//           list: [4, 5, 6]
-//         },
-//         {
-//           name: 'Sarim',
-//           age: 16,
-//           list: [7, 8, 9]
-//         }
-//       ],
-//       [
-//         {
-//           name: 'masood',
-//           age: 43,
-//           list: [11, 22, 33]
-//         },
-//         {
-//           name: 'usama',
-//           age: 63,
-//           list: [44, 55, 66]
-//         },
-//         {
-//           name: 'faraz',
-//           age: 99,
-//           list: [77, 88, 99]          
-//         }
-//       ]
-//     ];
+  gettingList() {
+    const { list, result, text } = this.state;
+    const itemsResult = text ? result : list;
     
-// console.log(obj);
+      return (
+        <div>
+         {text && <h3>You are typing '{text}' </h3>}
+<ul>
+        {
+          itemsResult.map((v, i) => {
+            return <li key={i}> {v} </li>
+          })
+        }
+      </ul>
+      </div>
+    );
+  }
+
+  render() {
+
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 onClick={() => this.changeSomething("sarim")}  className="App-title">{this.state.text}</h1>
-
-          <button  onClick={() => this.changeSomething("sarim")}> Click  Me </button>
-
-
-          {this.workHeader()}
-
-
-
-
-
-          {/* <button  onClick={function e()  {  window.alert('Pakistan Zindabad!')  } }> */}
-              {/* Click For Message! */}
-{/* </button> */}
-          {/* <button type="button" onclick="this.abc()" >Click for Google  </button> */}
-        </header>
-        {/* <p className="App-intro"> */}
-        {/* </p> */}
-          {/* {console.log(obj  , "arrayofobject")} */}
-        {/* <ul>
-          {
-            obj.map((v,i) =>{
-              // console.log(v)
-              return v.map((value , idex)=>{
-                console.log(value);
-              })
-            
-              })
-        }
-        </ul> */}
-
-        {/* {(number ===4 ) ? console.log( "this is right") : console.log( "not right") */}
-        
-{/* } */}
+        <input type="text" placeholder="Search Food" onChange={(e) => this.search(e.target.value)} />
+        {this.gettingList()}
       </div>
     );
   }
@@ -134,5 +69,5 @@ export default App;
 //   this.age = 17
 //   }
 //   }
-  
+
 //   new name_with()
