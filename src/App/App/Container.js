@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
-class Checking extends Component {
+import './Container.css';
+// import Text from '../../Text/Text/Text';
+class Container extends Component {
 
   constructor() {
     super();
@@ -8,18 +9,17 @@ class Checking extends Component {
     }
   }
 
-
   render() {
 
 
     return (
-      <div className="App">
+      <div className="App" >
       </div>
     );
   }
 }
 
-export default Checking;
+export default Container;
 
 
 // class name_with{

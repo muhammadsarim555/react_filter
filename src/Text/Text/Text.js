@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-
-class Test extends Component {
+class Text extends Component {
 
   constructor() {
     super();
@@ -8,18 +7,18 @@ class Test extends Component {
     }
   }
 
-
   render() {
 
 
     return (
       <div className="App">
+      <h1> Hello , i am composable Component.</h1>
       </div>
     );
   }
 }
 
-export default Test;
+export default Text;
 
 
 // class name_with{

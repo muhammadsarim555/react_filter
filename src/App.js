@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import Search from './component1/search/search'
+import Text from './Text/Text/Text';
+// import Container from './App/App/Container';
 
 class App extends Component {
 
@@ -53,6 +54,9 @@ class App extends Component {
 
     return (
       <div className="App">
+      {/* <Container /> */}
+      {/* <Test /> */}
+
         <input type="text" placeholder="Search Food" onChange={(e) => this.search(e.target.value)} />
         {this.gettingList()}
       </div>
